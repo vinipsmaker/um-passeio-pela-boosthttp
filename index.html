@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="boost.http" class="slide level1">
+<h1>Boost.Http</h1>
+<p>Um passeio</p>
+<p><em>Vinícius dos Santos Oliveira (vinipsmaker)</em></p>
+</section>
+<section id="início" class="slide level1">
+<h1>Início</h1>
+<figure>
+<img src="Screen%20Shot%202017-03-16%20at%2016.21.09.png" />
+</figure>
+<p>(58 emails (alguns privados))</p>
+</section>
+<section id="tufão" class="slide level1">
+<h1>Tufão ☄♙🔰⚰</h1>
+<ul>
+<li><strong>Multiplataforma</strong>.</li>
+<li>100% <strong>documentado</strong>.</li>
+<li>Muitos <strong>testes</strong> (não tantos quanto Boost.Http).</li>
+<li>Suporta funcionalidades do <strong>HTTP modernas</strong>.</li>
+<li><strong>Roteador de requisições</strong> flexível.</li>
+<li>Servidor <strong>standalone</strong> com suporte a TLS/SSL (<strong>HTTPS</strong>).</li>
+</ul>
+</section>
+<section id="tufão-1" class="slide level1">
+<h1>Tufão ☄♙🔰⚰</h1>
+<ul>
+<li>Servidor de <strong>arquivos estáticos</strong> com suporte a <strong>download parcial</strong> e, desde o Tufão 1.0, detecção automática de <strong>MIME</strong>.</li>
+<li>Suporte seguro e flexível a <strong>sessões</strong>.</li>
+<li>Suporte a <strong>WebSocket</strong>.</li>
+<li>Servidor de <strong>plugins</strong>.</li>
+<li><strong>Qt4, Qt5 e C++11</strong>.</li>
+</ul>
+</section>
+<section id="história" class="slide level1">
+<h1>História</h1>
+<ul>
+<li>(ainda mais experiência prévia...)</li>
+<li>2014!</li>
+<li>Google Summer of Code 2014.</li>
+<li>Usado em placas ARM e MIPS para a <a href="http://dynastrom.com/">solução de áudio multi-sala Dynastrom</a>.</li>
+<li>Reprovado pela revisão Boost em 2015.</li>
+<li>Boost Summer of Code 2016.</li>
+</ul>
+</section>
+<section id="história-1" class="slide level1">
+<h1>História</h1>
+<figure>
+<img src="Screen%20Shot%202017-03-16%20at%2017.17.42.png" />
+</figure>
+</section>
+<section id="hoje" class="slide level1">
+<h1>Hoje</h1>
+<ul>
+<li>Detalhes HTTP? Nós suportamos (chunking, pipelining, continue, upgrade...)</li>
+<li>Abstrai qual backend você está usando sem comprometer performance.</li>
+<li>Flexível, flexível, flexível.</li>
+<li>Design assíncrono extensível herdado da ASIO.</li>
+<li>Parser incremental e fácil de usar que não bufferiza.</li>
+<li>...</li>
+</ul>
+</section>
+<section id="visão-geral" class="slide level1">
+<h1>Visão geral</h1>
+<figure>
+<img src="overview.png" />
+</figure>
+</section>
+<section id="parser" class="slide level1">
+<h1>Parser</h1>
+<ul>
+<li>Suporta funcionalidades HTTP modernas.</li>
+<li>Simples.</li>
+<li>Portável (C++03 e poucas dependências).</li>
+<li>Não faz syscalls nem bufferiza (assim como o parser do NodeJS).</li>
+</ul>
+</section>
+<section id="parser-1" class="slide level1">
+<h1>Parser</h1>
+<p>Não rouba o controle do fluxo da sua aplicação:</p>
+<blockquote>
+<p>Parser incremental. Apenas um token por vez.</p>
+</blockquote>
+</section>
+<section class="slide level1">
+
+<p>Ao esgotar o buffer...</p>
+<ul>
+<li>Desista e use <code>expected_token()</code> para notificar o erro correto.</li>
+<li>Descarte dados já parseados e reordene buffer para ter mais espaço.</li>
+<li>Cresça o buffer e tente novamente.</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p>Não use <code>token_size()</code> como condição de parada.</p>
+<blockquote>
+<p>Tokens de tamanho 0 (<code>end_of_headers</code>...) são possíveis.</p>
+</blockquote>
+</section>
+<section class="slide level1">
+
+<p>Tokens sempre estão completos.</p>
+<blockquote>
+<p>Correspondência (matching) e decodificação de tokens são passos separados.</p>
+</blockquote>
+</section>
+<section id="parser-2" class="slide level1">
+<h1>Parser</h1>
+<ul>
+<li>Boost.Http faz mágica tentando ser compatível com coisa demais.</li>
+<li>Código do Tufão (desde versão 1.4) faz uso desse novo parser.</li>
+<li><a href="https://github.com/vinipsmaker/tufao/blob/43cd33f3388fd7061dedc75d683810a258f42eb3/src/httpserverrequest.cpp#L125"><code>httpserverrequest.cpp::HttpServerRequest::onReadyRead</code></a></li>
+</ul>
+</section>
+<section id="nodejs" class="slide level1">
+<h1>NodeJS</h1>
+<p>Detalhes completos: <a href="https://vinipsmaker.wordpress.com/2016/08/05/boost-http-has-a-new-parser/" class="uri">https://vinipsmaker.wordpress.com/2016/08/05/boost-http-has-a-new-parser/</a></p>
+</section>
+<section class="slide level1">
+
+<ul>
+<li>Callbacks (nada de inline).</li>
+<li>Precisa compilar.</li>
+<li>Não suporta métodos HTTP arbitrários.</li>
+<li>...</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<blockquote>
+<p>it can be interrupted at anytime</p>
+</blockquote>
+<figure>
+<img src="Screen%20Shot%202017-03-16%20at%2022.21.26.png" />
+</figure>
+<p>Issue #97.</p>
+</section>
+<section class="slide level1">
+
+<p>HTTP pipelining: Um método que funciona:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> on_message_complete(http_parser *parser) {
+  <span class="co">// ...</span>
+  <span class="cf">return</span> <span class="dv">-1</span>;
+}
+
+<span class="dt">void</span> run_parser() {
+  <span class="cf">if</span> (parser.http_errno) {
+    <span class="co">// ...</span>
+    } <span class="cf">else</span> <span class="cf">if</span> (parser.http_errno == cb_message_complete) {
+      http_parser_init(parser);
+    }
+  }
+}</code></pre></div>
+</section>
+<section id="gerenciamento-de-http-headers" class="slide level1">
+<h1>Gerenciamento de HTTP headers</h1>
+<p>callback model + appending everywhere + non-separate steps for matching and decoding:</p>
+</section>
+<section class="slide level1">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="cf">if</span> (value.size() <span class="co">/* last header piece was value */</span>) {
+  trim_right_if(socket-&gt;last_header.second, [](<span class="dt">char</span> ch) {
+      <span class="cf">return</span> ch == <span class="st">&#39; &#39;</span> || ch == <span class="st">&#39;</span><span class="sc">\t</span><span class="st">&#39;</span>;
+    });
+  <span class="cf">if</span> (parser-&gt;http_minor != <span class="dv">0</span>
+      || (field != <span class="st">&quot;expect&quot;</span> &amp;&amp; field != <span class="st">&quot;upgrade&quot;</span>)) {
+    (socket-&gt;use_trailers ? message-&gt;trailers()
+     : message-&gt;headers()).insert(socket-&gt;last_header);
+  }
+  value.clear();
+
+  field.replace(<span class="dv">0</span>, field.size(), at, size);
+  transform(field.begin(), field.end(), field.begin(),
+            tolower);
+
+  <span class="cf">if</span> (socket-&gt;use_trailers
+    &amp;&amp; socket-&gt;istate != http::read_state::body_ready) {
+    socket-&gt;istate = http::read_state::body_ready;
+  }
+} <span class="cf">else</span> {
+  <span class="kw">auto</span> offset = field.size();
+  field.append(at, size);
+  <span class="kw">auto</span> begin = field.begin() + offset;
+  transform(begin, field.end(), begin, tolower);
+}</code></pre></div>
+</section>
+<section id="nodejs-parser" class="slide level1">
+<h1>NodeJS parser</h1>
+<p>Mais problemas? Pode apostar.</p>
+</section>
+<section id="boost.http-time" class="slide level1">
+<h1>Boost.Http time!</h1>
+</section>
+<section id="bonus" class="slide level1">
+<h1>Bonus</h1>
+<pre><code>include/boost/http/syntax
+├── chunk_size.hpp
+├── content_length.hpp
+├── crlf.hpp
+├── field_name.hpp
+├── field_value.hpp
+├── ows.hpp
+├── reason_phrase.hpp
+└── status_code.hpp</code></pre>
+</section>
+<section id="futuro" class="slide level1">
+<h1>Futuro</h1>
+<ul>
+<li>Parser combinators.</li>
+<li>Generators.</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
